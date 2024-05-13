@@ -81,7 +81,7 @@ RUBY_INCLUDE = $(D_RUBY)/include/ruby-2.0.0
 else
 
 ifeq ($(PLATFORM),__UNIX__)
-RUBY_INCLUDE = /usr/include/ruby-2.1.0 /usr/include/arm-linux-gnueabi/ruby-2.1.0
+RUBY_INCLUDE = /usr/include/ruby-2.1.0 /usr/include/arm-linux/ruby-2.1.0
 endif
 
 endif

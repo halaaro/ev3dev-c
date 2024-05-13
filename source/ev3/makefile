@@ -21,9 +21,9 @@ TOP = ../..
 
 # -- compiler
 ifeq ($(PLATFORM),__UNIX__)
-CC = arm-linux-gnueabi-gcc
-CXX = arm-linux-gnueabi-g++
-LINK = arm-linux-gnueabi-ar
+CC = arm-linux-gcc
+CXX = arm-linux-g++
+LINK = arm-linux-ar
 else
 CC = gcc
 CXX = g++

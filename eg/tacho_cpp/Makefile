@@ -19,8 +19,8 @@ define remove
 	cmd /c del /f $(subst /,\,$1)
 endef
 else
-CC = arm-linux-gnueabi-gcc
-CXX = arm-linux-gnueabi-g++
+CC = arm-linux-gcc
+CXX = arm-linux-g++
 define remove
 	rm -f
 endef

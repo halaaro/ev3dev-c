@@ -21,8 +21,8 @@ TOP = ..
 
 # -- compilers
 ifeq ($(PLATFORM),__UNIX__)
-CC = arm-linux-gnueabi-gcc
-CXX = arm-linux-gnueabi-g++
+CC = arm-linux-gcc
+CXX = arm-linux-g++
 else
 CC = gcc
 CXX = g++
