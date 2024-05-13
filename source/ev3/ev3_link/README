@@ -46,7 +46,7 @@
 
         #include "ev3.h"
 
-        #ifndef __ARM_ARCH_4T__
+        #ifndef __ARM_ARCH_5TEJ__
             ev3_brick_addr = "192.168.0.204";
 
         #endif
@@ -54,7 +54,7 @@
         ev3_init();
 
     Remote access to the EV3 brick is implied when you build a program
-    not on __ARM_ARCH_4T__.
+    not on __ARM_ARCH_5TEJ__.
 
     ___         __________________________________
     ___ LICENSE __________________________________

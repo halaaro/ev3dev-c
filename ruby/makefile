@@ -26,7 +26,7 @@ LINK = $(CC)
 
 # -- on EV3 BRICK
 ifeq ($(PLATFORM),__UNIX__)
-EV3 = $(if $(shell $(CC) -dM -E - < /dev/null | grep __ARM_ARCH_4T__),1,0)
+EV3 = $(if $(shell $(CC) -dM -E - < /dev/null | grep __ARM_ARCH_5TEJ__),1,0)
 else
 EV3 = 0
 endif

@@ -114,7 +114,7 @@ static struct sockaddr_in __r_addr, __t_addr;
 #define ERR_PREF  "*** ERROR *** ev3_link: "
 
 // EV3 BRICK /////////////////////////////////////
-#ifdef __ARM_ARCH_4T__
+#ifdef __ARM_ARCH_5TEJ__
 
 #include <linux/input.h>
 #include <sys/stat.h>
@@ -365,7 +365,7 @@ static int __receive( void )
 		switch ( h->type ) {
 
 // EV3 BRICK /////////////////////////////////////
-#ifdef __ARM_ARCH_4T__
+#ifdef __ARM_ARCH_5TEJ__
 
 		case EV3_MULTI_WRITE:
 			if ( msg_l < ( int ) sizeof( EV3_MULTI_WRITE_SUBHEADER )) {
@@ -480,7 +480,7 @@ static int __receive( void )
 }
 
 // EV3 BRICK /////////////////////////////////////
-#ifdef __ARM_ARCH_4T__
+#ifdef __ARM_ARCH_5TEJ__
 
 static uint16_t port = 8800;
 static int alive = 1;

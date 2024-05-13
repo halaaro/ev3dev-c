@@ -434,113 +434,113 @@ INX_T get_sensor_type_inx( uint8_t sn )
 	if ( !get_sensor_driver_name( sn, buf, sizeof( buf ))) return ( SENSOR_TYPE__NONE_ );
 
 	switch ( crc32( 0, buf, strlen( buf ))) {
-	case 0x9aaef5b7L:  /* "ev3-analog-XX" */
+	case 0x9aaef5b7:  /* "ev3-analog-XX" */
 		return EV3_ANALOG_XX;
-	case 0xf7e1ce2cL:  /* "nxt-analog" */
+	case 0xf7e1ce2c:  /* "nxt-analog" */
 		return NXT_ANALOG;
-	case 0xdba885c2L:  /* "pixy-lego" */
+	case 0xdba885c2:  /* "pixy-lego" */
 		return PIXY_LEGO;
-	case 0xe1f9430cL:  /* "di-dflex" */
+	case 0xe1f9430c:  /* "di-dflex" */
 		return DI_DFLEX;
-	case 0xbd6636bL:  /* "fcl-9dof" */
+	case 0xbd6636b:  /* "fcl-9dof" */
 		return FCL_9DOF;
-	case 0x69cf09acL:  /* "fcl-adc" */
+	case 0x69cf09ac:  /* "fcl-adc" */
 		return FCL_ADC;
-	case 0x130104efL:  /* "fcl-altitude" */
+	case 0x130104ef:  /* "fcl-altitude" */
 		return FCL_ALTITUDE;
-	case 0xffe329dL:  /* "fcl-gesture" */
+	case 0xffe329d:  /* "fcl-gesture" */
 		return FCL_GESTURE;
-	case 0xc137d61fL:  /* "fcl-humidity" */
+	case 0xc137d61f:  /* "fcl-humidity" */
 		return FCL_HUMIDITY;
-	case 0xfaac1d8fL:  /* "fcl-ir" */
+	case 0xfaac1d8f:  /* "fcl-ir" */
 		return FCL_IR;
-	case 0xcd08d04bL:  /* "fcl-light" */
+	case 0xcd08d04b:  /* "fcl-light" */
 		return FCL_LIGHT;
-	case 0x49a6f8bfL:  /* "ht-nxt-color" */
+	case 0x49a6f8bf:  /* "ht-nxt-color" */
 		return HT_NXT_COLOR;
-	case 0x2f71f55fL:  /* "ht-nxt-angle" */
+	case 0x2f71f55f:  /* "ht-nxt-angle" */
 		return HT_NXT_ANGLE;
-	case 0x720c86b3L:  /* "ht-nxt-accel" */
+	case 0x720c86b3:  /* "ht-nxt-accel" */
 		return HT_NXT_ACCEL;
-	case 0xd5e63331L:  /* "ht-nxt-barometric" */
+	case 0xd5e63331:  /* "ht-nxt-barometric" */
 		return HT_NXT_BAROMETRIC;
-	case 0x53b4575dL:  /* "ht-nxt-color-v2" */
+	case 0x53b4575d:  /* "ht-nxt-color-v2" */
 		return HT_NXT_COLOR_V2;
-	case 0x941b59bbL:  /* "ht-nxt-eopd" */
+	case 0x941b59bb:  /* "ht-nxt-eopd" */
 		return HT_NXT_EOPD;
-	case 0xb898337eL:  /* "ht-nxt-force" */
+	case 0xb898337e:  /* "ht-nxt-force" */
 		return HT_NXT_FORCE;
-	case 0x835df5f8L:  /* "ht-nxt-gyro" */
+	case 0x835df5f8:  /* "ht-nxt-gyro" */
 		return HT_NXT_GYRO;
-	case 0xcc91b174L:  /* "ht-nxt-ir-link" */
+	case 0xcc91b174:  /* "ht-nxt-ir-link" */
 		return HT_NXT_IR_LINK;
-	case 0xe6e18e7bL:  /* "ht-nxt-ir-receiver" */
+	case 0xe6e18e7b:  /* "ht-nxt-ir-receiver" */
 		return HT_NXT_IR_RECEIVER;
-	case 0xd2b1e8faL:  /* "ht-nxt-pir" */
+	case 0xd2b1e8fa:  /* "ht-nxt-pir" */
 		return HT_NXT_PIR;
-	case 0x7786eae3L:  /* "ht-nxt-compass" */
+	case 0x7786eae3:  /* "ht-nxt-compass" */
 		return HT_NXT_COMPASS;
-	case 0x634bb63aL:  /* "ht-nxt-mag" */
+	case 0x634bb63a:  /* "ht-nxt-mag" */
 		return HT_NXT_MAG;
-	case 0xc6cc6277L:  /* "ht-nxt-ir-seek-v2" */
+	case 0xc6cc6277:  /* "ht-nxt-ir-seek-v2" */
 		return HT_NXT_IR_SEEK_V2;
-	case 0x8b9b2d9cL:  /* "ht-nxt-smux" */
+	case 0x8b9b2d9c:  /* "ht-nxt-smux" */
 		return HT_NXT_SMUX;
-	case 0x7da3900fL:  /* "ht-super-pro" */
+	case 0x7da3900f:  /* "ht-super-pro" */
 		return HT_SUPER_PRO;
-	case 0xfec0d84eL:  /* "lego-ev3-us" */
+	case 0xfec0d84e:  /* "lego-ev3-us" */
 		return LEGO_EV3_US;
-	case 0x90a8a92dL:  /* "lego-ev3-gyro" */
+	case 0x90a8a92d:  /* "lego-ev3-gyro" */
 		return LEGO_EV3_GYRO;
-	case 0xbf0c2bb8L:  /* "lego-ev3-color" */
+	case 0xbf0c2bb8:  /* "lego-ev3-color" */
 		return LEGO_EV3_COLOR;
-	case 0x2fec4ea3L:  /* "lego-ev3-touch" */
+	case 0x2fec4ea3:  /* "lego-ev3-touch" */
 		return LEGO_EV3_TOUCH;
-	case 0x6fb0b585L:  /* "lego-ev3-ir" */
+	case 0x6fb0b585:  /* "lego-ev3-ir" */
 		return LEGO_EV3_IR;
-	case 0x7756e9ceL:  /* "wedo-hub" */
+	case 0x7756e9ce:  /* "wedo-hub" */
 		return WEDO_HUB;
-	case 0x69420300L:  /* "wedo-motion" */
+	case 0x69420300:  /* "wedo-motion" */
 		return WEDO_MOTION;
-	case 0x68b17c4bL:  /* "wedo-tilt" */
+	case 0x68b17c4b:  /* "wedo-tilt" */
 		return WEDO_TILT;
-	case 0xc62761bdL:  /* "lego-power-storage" */
+	case 0xc62761bd:  /* "lego-power-storage" */
 		return LEGO_POWER_STORAGE;
-	case 0x986255fcL:  /* "lego-nxt-temp" */
+	case 0x986255fc:  /* "lego-nxt-temp" */
 		return LEGO_NXT_TEMP;
-	case 0x399f89bbL:  /* "lego-nxt-touch" */
+	case 0x399f89bb:  /* "lego-nxt-touch" */
 		return LEGO_NXT_TOUCH;
-	case 0xa433f8beL:  /* "lego-nxt-light" */
+	case 0xa433f8be:  /* "lego-nxt-light" */
 		return LEGO_NXT_LIGHT;
-	case 0x37a767cdL:  /* "lego-nxt-sound" */
+	case 0x37a767cd:  /* "lego-nxt-sound" */
 		return LEGO_NXT_SOUND;
-	case 0x2df4f668L:  /* "lego-nxt-us" */
+	case 0x2df4f668:  /* "lego-nxt-us" */
 		return LEGO_NXT_US;
-	case 0x5ea03e09L:  /* "mi-xg1300l" */
+	case 0x5ea03e09:  /* "mi-xg1300l" */
 		return MI_XG1300L;
-	case 0x33431ceaL:  /* "ms-absolute-imu" */
+	case 0x33431cea:  /* "ms-absolute-imu" */
 		return MS_ABSOLUTE_IMU;
-	case 0x8edd0449L:  /* "ms-angle" */
+	case 0x8edd0449:  /* "ms-angle" */
 		return MS_ANGLE;
-	case 0x718c778L:  /* "ms-ev3-smux" */
+	case 0x718c778:  /* "ms-ev3-smux" */
 		return MS_EV3_SMUX;
-	case 0xe337cbb5L:  /* "ms-light-array" */
+	case 0xe337cbb5:  /* "ms-light-array" */
 		return MS_LIGHT_ARRAY;
-	case 0xfae1806dL:  /* "ms-line-leader" */
+	case 0xfae1806d:  /* "ms-line-leader" */
 		return MS_LINE_LEADER;
-	case 0xdde57ce7L:  /* "ms-nxtcam" */
+	case 0xdde57ce7:  /* "ms-nxtcam" */
 		return MS_NXTCAM;
-	case 0xba02b909L:  /* "ms-nxtcam5" */
+	case 0xba02b909:  /* "ms-nxtcam5" */
 		return MS_NXTCAM5;
-	case 0x1613fa0aL:  /* "ms-nxtmmx" */
+	case 0x1613fa0a:  /* "ms-nxtmmx" */
 		return MS_NXTMMX;
-	case 0x993a454aL:  /* "ms-8ch-servo" */
+	case 0x993a454a:  /* "ms-8ch-servo" */
 		return MS_8CH_SERVO;
-	case 0x9ae28244L:  /* "ms-pps58-nx" */
+	case 0x9ae28244:  /* "ms-pps58-nx" */
 		return MS_PPS58_NX;
-	case 0x5b31dc33L:  /* "ms-pixy-adapter" */
+	case 0x5b31dc33:  /* "ms-pixy-adapter" */
 		return MS_PIXY_ADAPTER;
-	case 0xb033713fL:  /* "ms-nxt-touch-mux" */
+	case 0xb033713f:  /* "ms-nxt-touch-mux" */
 		return MS_NXT_TOUCH_MUX;
 
 	}

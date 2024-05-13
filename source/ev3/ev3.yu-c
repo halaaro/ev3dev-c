@@ -24,7 +24,7 @@
  */
 
 // EV3 BRICK /////////////////////////////////////
-#ifdef __ARM_ARCH_4T__
+#ifdef __ARM_ARCH_5TEJ__
 
 #include <sys/types.h>
 #include <dirent.h>

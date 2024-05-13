@@ -22,7 +22,7 @@
  */
 
 // EV3 BRICK /////////////////////////////////////
-#ifdef __ARM_ARCH_4T__
+#ifdef __ARM_ARCH_5TEJ__
 
 #include <sys/types.h>
 #include <dirent.h>
@@ -216,7 +216,7 @@ size_t ev3_multi_write( uint8_t *sn, uint16_t pos, const char *fn, char *value )
 
 size_t ev3_write_int( const char *fn, int value )
 {
-	char s[ 12 ];
+	char s[ 21 ];
 
 	modp_itoa10( value, s );
 	return ev3_write( fn, s );
@@ -224,7 +224,7 @@ size_t ev3_write_int( const char *fn, int value )
 
 size_t ev3_multi_write_int( uint8_t *sn, uint16_t pos, const char *fn, int value )
 {
-	char s[ 12 ];
+	char s[ 21 ];
 
 	modp_itoa10( value, s );
 	return ev3_multi_write( sn, pos, fn, s );
@@ -232,7 +232,7 @@ size_t ev3_multi_write_int( uint8_t *sn, uint16_t pos, const char *fn, int value
 
 size_t ev3_write_dword( const char *fn, uint32_t value )
 {
-	char s[ 11 ];
+	char s[ 20 ];
 
 	modp_uitoa10( value, s );
 	return ev3_write( fn, s );
@@ -240,7 +240,7 @@ size_t ev3_write_dword( const char *fn, uint32_t value )
 
 size_t ev3_multi_write_dword( uint8_t *sn, uint16_t pos, const char *fn, uint32_t value )
 {
-	char s[ 11 ];
+	char s[ 20 ];
 
 	modp_uitoa10( value, s );
 	return ev3_multi_write( sn, pos, fn, s );
@@ -315,7 +315,7 @@ size_t ev3_read( const char *fn, char *buf, size_t sz )
 
 size_t ev3_read_int( const char *fn, int *buf )
 {
-	char s[ 12 ];
+	char s[ 21 ];
 	char *end;
 
 	if ( ev3_read( fn, s, sizeof( s ))) {
@@ -329,7 +329,7 @@ size_t ev3_read_int( const char *fn, int *buf )
 
 size_t ev3_read_dword( const char *fn, uint32_t *buf )
 {
-	char s[ 11 ];
+	char s[ 20 ];
 	char *end;
 
 	if ( ev3_read( fn, s, sizeof( s ))) {

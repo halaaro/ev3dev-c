@@ -54,7 +54,7 @@ extern "C" {
 #endif
 
 // CLIENT ////////////////////////////////////////
-#ifndef __ARM_ARCH_4T__
+#ifndef __ARM_ARCH_5TEJ__
 
 /**
  *  \brief Predefined IP address of the EV3 brick.
